@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_3/utilies/routes.dart';
 
 class LoginPage extends StatelessWidget {
   @override
@@ -27,21 +28,20 @@ class LoginPage extends StatelessWidget {
                   children: [
                     TextFormField(
                       decoration: InputDecoration(
-                          hintText: "Enter username", labelText: "Username:"),
+                          hintText: "Enter username", labelText: "Username"),
                     ),
                     TextFormField(
                       obscureText: true,
                       decoration: InputDecoration(
-                          hintText: "Enter password", labelText: "Password:"),
+                          hintText: "Enter password", labelText: "Password"),
                     ),
                     SizedBox(height: 40.0),
                     ElevatedButton(
                       onPressed: () {
-                        print("Hello there!");
+                        Navigator.pushNamed(context, MyRoutes.homeRoute);
                       },
                       child: Text("Login"),
                       style: TextButton.styleFrom(minimumSize: Size(150, 40)),
-
                     )
                   ],
                 ),
